@@ -1,0 +1,9 @@
+TODO
+----
+
+-Modify class Rule to accept rulestrings like
+"/234" (serviettes)
+
+-Add pause button
+
+-Add "step" counter

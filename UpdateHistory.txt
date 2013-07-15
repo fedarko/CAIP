@@ -1,0 +1,76 @@
+CAIP
+
+Update History
+
+By Marcus Fedarko: marcus.fedarko@gmail.com
+-------------------------------------------
+
+January 15, 2011
+----------------
+
+    -Added Main.py with class Main with methods __init__()
+    and mainloop().
+
+    -Added SpriteManager.py with class SpriteManager with
+    methods __init__() and update_sprites().
+
+    -Added Cell.py with class Cell with method __init__().
+
+    -Added LevelReader.py with class LevelReader with methods
+    __init__() and read().
+
+    -Added Levels.py with level list level1.
+
+    -Added Config.py.
+
+    -Added run.py.
+
+January 18, 2011
+----------------
+
+    -Added switch_on() and switch_off() to class Cell.
+
+    -Added code to SpriteManager.update_sprites() to read through
+     a level and change cells based on the states of those around
+    them.
+
+    -Added find_cell() to class SpriteManager. I'm going to move
+    it (and the aforementioned code in update_sprites() I added
+    today) to a better class later; for now, it's just there for
+    convenience and (moreso) laziness.
+
+January 19, 2011
+----------------
+
+    -Added CellManager.py with Class CellManager with methods
+    __init__(), find_cell(), and update_cells().
+
+    -Fixed CellManager.update_cells() so that it tracks necessary
+    updates for cells in a dictionary and updates cells once the
+    changes for each cell have been determined.
+
+    -Changed CellManager.update_cells() to iterate through
+    CellManager.cells directly, instead of traversing a level list.
+
+    -Added Rule.py with function rule(). Now, it is customizable
+    by the user of the program.
+
+January 21, 2011
+----------------
+
+    -Added a dictionary, topleftToCell, to LevelReader. It is then used by
+    CellManager.find_cell() via SpriteManager. It provides a much faster
+    alternative than searching through CellManager.cells manually, and sped
+    up the program a lot.
+
+January 23, 2011
+----------------
+
+    -Added the variable RULESTRING to Config.py. This means any Life-Like
+    Cellular Automaton can be simulated now by just changing this, instead
+    of actually changing rule() in Rule.py.
+
+    -Added class Rule to Rule.py with methods __init__(), rule(), and
+    process_rulestring(). I already had a function - rule() - in
+    Rule.py, but I added process_rulestring() to process the above
+    variable. For ease of use, I made those functions into a class.
