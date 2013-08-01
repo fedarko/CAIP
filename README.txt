@@ -1,5 +1,7 @@
 CAIP: A Cellular Automata Implementation in Pygame/Python
 
+Code License: GNU GPL v3.0
+
 README
 
 By Marcus Fedarko: marcus.fedarko@gmail.com
